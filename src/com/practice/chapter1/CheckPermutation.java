@@ -39,7 +39,7 @@ public class CheckPermutation {
 	public static void main(String[] args) {	
 		CheckPermutation check = new CheckPermutation();
 		System.out.println(check.isPermutation("abcd", "cbac"));
-		System.out.println(check.isPermutation("abba", "bbaa"));
+		System.out.println(check.isPermutation("abba", "abda"));
 	}
 
 }
