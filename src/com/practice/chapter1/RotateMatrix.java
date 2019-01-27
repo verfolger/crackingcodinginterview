@@ -65,6 +65,21 @@ public class RotateMatrix {
 		}
 	}
 	
+	
+	public static void rotateMatrixByElements(int[][] m, int noElements) {
+		
+		int len = m.length;
+		
+		for (int row = 0; row < len / 2; row++) {
+			for (int col = row; col < len - 1 - row; col++) {
+				
+				
+			}
+		}
+		
+		
+	}
+	
 	public static void rotateRightKTimes(int[][] m, int rotationCount) {
 		
 		int rows = m.length;	
@@ -78,20 +93,20 @@ public class RotateMatrix {
 			/**
 			 * Copy the first rowCount - rotationCount elements in a temporary array
 			 */
-			for (int j = 0; j < rows - rotationCount; j++)
-				temp[j] = m[i][j];
+			for (int col = 0; col < rows - rotationCount; col++)
+				temp[col] = m[i][col];
 			
 			/**
 			 * Copy the remaining elements to the start
 			 */
-			for (int j = rowCount - rotationCount; j < rowCount; j++)
-				m[i][j - rowCount + rotationCount] = m[i][j];
+			for (int col = rows - rotationCount; col < rows; col++)
+				m[i][col - rows + rotationCount] = m[i][col];
 			
 			/**
 			 * Copy elements in temporary to the remaining part of the array
 			 */
-			for (int j = rotationCount; j < rowCount; j++)
-				m[i][j] = temp[j - rotationCount];				
+			for (int col = rotationCount; col < rows; col++)
+				m[i][col] = temp[col - rotationCount];				
 		}
 	}
 }

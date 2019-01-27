@@ -6,9 +6,9 @@ public class LinkedList<T> {
 	private int length = 0;
 	
 	public static class ListNode<T> { // Important structure on which this data structure is dependent on!
-		T data;
-		ListNode<T> next;
-		ListNode(T data) {
+		public T data;
+		public ListNode<T> next;
+		public ListNode(T data) {
 			this.data = data;
 		}	
 	}
